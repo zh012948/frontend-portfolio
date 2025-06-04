@@ -3,24 +3,20 @@
     display: inline-block;
     width: 300px;
     /* Adjust size as needed */
-    height: 270px;
-
-
-
+    height: 290px;
     background: linear-gradient(45deg, #6E57E0, #A88FE0);
 
+    border-radius: 50% 50% 50% 50%;
 
+    /*  top-left top-right bottom-right bottom-left; */
 
-    /* Linear gradient background */
-    border-radius: 40% 60% 50% 70%;
-    /* Asymmetrical blob shape */
     overflow: hidden;
 }
 
 .blob-image {
     position: absolute;
     top: 23px;
-    left: 40px;
+    left: 0px;
     width: 100%;
     height: 100%;
     border-radius: 40% 60% 50% 70%;

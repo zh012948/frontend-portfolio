@@ -1,0 +1,30 @@
+.blob-container {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    /* Adjust size as needed */
+    height: 270px;
+
+
+
+    background: linear-gradient(45deg, #6E57E0, #A88FE0);
+
+
+
+    /* Linear gradient background */
+    border-radius: 40% 60% 50% 70%;
+    /* Asymmetrical blob shape */
+    overflow: hidden;
+}
+
+.blob-image {
+    position: absolute;
+    top: 23px;
+    left: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 40% 60% 50% 70%;
+    /* Match container's shape */
+    object-fit: cover;
+    display: block;
+}

@@ -1,11 +1,11 @@
-import BlobImage from './components/BlobImage'
+import Navbar from "./components/Navbar";
 
 
 
 const App = () => {
   return (
     <>
-      <BlobImage />
+      <Navbar />
     </>
   );
 };

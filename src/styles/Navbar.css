@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #191627;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.navbar {
+    color: white;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.navbar ul {
+    display: grid;
+    font-size: 13.08px;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 25px;
+}
+
+
+.navlinks ul li a:hover {
+    /* color: linear-gradient(45deg, #6E57E0, #A88FE0); */
+    color: red;
+}
+
+i:hover {
+    color: violet;
+}

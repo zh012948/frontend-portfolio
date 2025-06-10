@@ -9,43 +9,66 @@ export default function Navbar() {
         const bgColor = darkMode ? '#191627' : '#ffffff';
         const textColor = darkMode ? '#ffffff' : '#6E57E0';
 
-        document.documentElement.style.backgroundColor = bgColor; // html
-        document.body.style.backgroundColor = bgColor; // body
+        document.documentElement.style.backgroundColor = bgColor;
+        document.body.style.backgroundColor = bgColor;
         document.body.style.color = textColor;
 
-        // Optional: smooth transition
         document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
         document.documentElement.style.transition = 'background-color 0.3s ease';
     }, [darkMode]);
 
-    // Background colors for navbar and navlinks based on theme
     const navbarBg = darkMode ? '#191627' : '#ffffff';
     const navlinksBg = darkMode ? '#2c2a48' : '#f0f0f0';
+    const linkColor = darkMode ? '#ffffff' : '#191627';
+
+    const navItems = [
+        { icon: 'bx-home-circle', label: 'Home' },
+        { icon: 'bx-user-circle', label: 'About' },
+        { icon: 'bx-file', label: 'Skills' },
+        { icon: 'bx-briefcase-alt-2', label: 'Services' },
+        { icon: 'bx-image', label: 'Portfolio' },
+        { icon: 'bx-send', label: 'Contact Me' }
+    ];
 
     return (
-        <div className="navbar" style={{ backgroundColor: navbarBg, transition: 'background-color 0.3s ease' }}>
+        <div
+            className="navbar"
+            style={{ backgroundColor: navbarBg, transition: 'background-color 0.3s ease' }}
+        >
             <div className="logo">Zeeshan</div>
 
             <div
                 className={`navlinks ${menuOpen ? 'active' : ''}`}
-                style={{ backgroundColor: navlinksBg, transition: 'background-color 0.3s ease' }}
+                style={{
+                    backgroundColor: navlinksBg,
+                    transition: 'background-color 0.3s ease',
+                }}
             >
                 <ul>
-                    <li><a href="#"><i className='bx bx-home-circle'></i><br />Home</a></li>
-                    <li><a href="#"><i className='bx bx-user-circle'></i><br />About</a></li>
-                    <li><a href="#"><i className='bx bx-file'></i><br />Skills</a></li>
-                    <li><a href="#"><i className='bx bx-briefcase-alt-2'></i><br />Services</a></li>
-                    <li><a href="#"><i className='bx bx-image'></i><br />Portfolio</a></li>
-                    <li><a href="#"><i className='bx bx-send'></i><br />Contact Me</a></li>
+                    {navItems.map(({ icon, label }, index) => (
+                        <li key={index}>
+                            <a
+                                href="#"
+                                style={{
+                                    color: linkColor,
+                                    textDecoration: 'none',
+                                    transition: 'color 0.2s ease',
+                                }}
+                            >
+                                <i className={`bx ${icon}`} style={{ fontSize: 24 }}></i><br />
+                                {label}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </div>
 
             <div className="icons">
                 <div className="display-mode" onClick={() => setDarkMode(!darkMode)}>
                     {darkMode ? (
-                        <i className='bx bx-moon' style={{ color: '#ffffff' }}></i>
+                        <i className="bx bx-moon" style={{ color: '#ffffff' }}></i>
                     ) : (
-                        <i className='bx bxs-sun' style={{ color: '#6E57E0' }}></i>
+                        <i className="bx bxs-sun" style={{ color: '#6E57E0' }}></i>
                     )}
                 </div>
 

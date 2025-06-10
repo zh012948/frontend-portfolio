@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #191627;
+    /* background-color: #191627; */
 }
 
 body {
@@ -11,9 +11,9 @@ body {
     /* height: 1000vh; */
 }
 
-body.light {
+/* body.light {
     background: white;
-}
+} */
 
 
 .logo {
@@ -36,7 +36,7 @@ body.light {
     display: flex;
     justify-content: space-between;
     padding: 12px;
-    color: white;
+    /* color: white; */
     background-color: #191627;
     z-index: 100;
 }

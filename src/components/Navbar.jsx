@@ -18,11 +18,18 @@ export default function Navbar() {
         document.documentElement.style.transition = 'background-color 0.3s ease';
     }, [darkMode]);
 
+    // Background colors for navbar and navlinks based on theme
+    const navbarBg = darkMode ? '#191627' : '#ffffff';
+    const navlinksBg = darkMode ? '#2c2a48' : '#f0f0f0';
+
     return (
-        <div className="navbar">
+        <div className="navbar" style={{ backgroundColor: navbarBg, transition: 'background-color 0.3s ease' }}>
             <div className="logo">Zeeshan</div>
 
-            <div className={`navlinks ${menuOpen ? 'active' : ''}`}>
+            <div
+                className={`navlinks ${menuOpen ? 'active' : ''}`}
+                style={{ backgroundColor: navlinksBg, transition: 'background-color 0.3s ease' }}
+            >
                 <ul>
                     <li><a href="#"><i className='bx bx-home-circle'></i><br />Home</a></li>
                     <li><a href="#"><i className='bx bx-user-circle'></i><br />About</a></li>

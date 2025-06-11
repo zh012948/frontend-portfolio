@@ -130,7 +130,7 @@ body {
 
 /* Laptop */
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1024px) {
 
     .navbar {
         top: 0;
@@ -197,6 +197,3 @@ body {
         width: 80%;
     }
 }
-
-
-@media screen and (min-width:1440px) {}

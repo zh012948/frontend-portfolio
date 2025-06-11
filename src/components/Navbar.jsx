@@ -4,6 +4,7 @@ import '../styles/Navbar.css';
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(true);
+    const [hoveredIndex, setHoveredIndex] = useState(null); // Track hover
 
     useEffect(() => {
         const bgColor = darkMode ? '#191627' : '#ffffff';
@@ -18,8 +19,9 @@ export default function Navbar() {
     }, [darkMode]);
 
     const navbarBg = darkMode ? '#191627' : '#ffffff';
-    const navlinksBg = darkMode ? '#2c2a48' : '#f0f0f0';
+    const navlinksBg = darkMode ? '#191627' : '#ffffff';
     const linkColor = darkMode ? '#ffffff' : '#191627';
+    const hoverColor = darkMode ? '#6E57E0' : '#6E57E0';
 
     const navItems = [
         { icon: 'bx-home-circle', label: 'Home' },
@@ -31,10 +33,10 @@ export default function Navbar() {
     ];
 
     return (
-        <div
-            className="navbar"
-            style={{ backgroundColor: navbarBg, transition: 'background-color 0.3s ease' }}
-        >
+        <div className="navbar" style={{
+            backgroundColor: navbarBg, transition: 'background-color 0.3s ease', borderBottom: darkMode ? '1px solid #444' : '1px solid #ccc'
+        }}>
+
             <div className="logo">Zeeshan</div>
 
             <div
@@ -49,13 +51,29 @@ export default function Navbar() {
                         <li key={index}>
                             <a
                                 href="#"
+                                onMouseEnter={() => setHoveredIndex(index)}
+                                onMouseLeave={() => setHoveredIndex(null)}
                                 style={{
-                                    color: linkColor,
+                                    color:
+                                        hoveredIndex === index
+                                            ? hoverColor
+                                            : linkColor,
                                     textDecoration: 'none',
                                     transition: 'color 0.2s ease',
                                 }}
                             >
-                                <i className={`bx ${icon}`} style={{ fontSize: 24 }}></i><br />
+                                <i
+                                    className={`bx ${icon}`}
+                                    style={{
+                                        fontSize: 24,
+                                        color:
+                                            hoveredIndex === index
+                                                ? hoverColor
+                                                : linkColor,
+                                        transition: 'color 0.2s ease',
+                                    }}
+                                ></i>
+                                <br />
                                 {label}
                             </a>
                         </li>

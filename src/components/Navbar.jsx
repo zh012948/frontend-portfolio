@@ -8,7 +8,7 @@ export default function Navbar() {
 
     useEffect(() => {
         const bgColor = darkMode ? '#191627' : '#ffffff';
-        const textColor = darkMode ? '#ffffff' : '#6E57E0';
+        const textColor = darkMode ? '#ffffff' : '#000000';
 
         document.documentElement.style.backgroundColor = bgColor;
         document.body.style.backgroundColor = bgColor;

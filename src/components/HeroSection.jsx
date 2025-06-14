@@ -44,7 +44,7 @@ export default function HeroSection() {
                 </div>
 
                 <div className="blob-image">
-                    {/* <BlobImage /> */}
+                    <BlobImage />
                 </div>
 
             </div>

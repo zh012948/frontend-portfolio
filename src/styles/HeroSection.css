@@ -1,17 +1,32 @@
+* {
+    scroll-behavior: smooth;
+}
+
+
+
 .hero-container {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    position: relative;
-    padding-top: 90px;
-    height: 100vh;
+    padding-top: 120px;
+    height: 90vh;
+    /* width: 90%; */
 }
 
 
 .social-icons {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    padding-top: 90px;
+    /* width: 10%; */
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
     gap: 20px;
+    z-index: 99;
+    height: 100vh;
 }
 
 .social-icons a img {
@@ -21,4 +36,52 @@
 
 .social-icons a img:hover {
     scale: 1.2;
+}
+
+.hello-text,
+.name-animation {
+    /* color: #F2F1F3; */
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.content-container {
+    position: relative;
+}
+
+.content-container .job-title {
+    font-size: 23px;
+    /* color: #BCBAC4; */
+    line-height: 25px;
+    font-weight: 700;
+    line-height: 2.5;
+}
+
+.briefing {
+    /* color: #BCBAC4; */
+    font-weight: 300;
+}
+
+.btnContact button {
+    position: relative;
+    background: #6E57E0;
+    padding: 15px 20px;
+    border-radius: 9px;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+    z-index: 199;
+    transition: 0.2s ease;
+}
+
+.btnContact img {
+    width: 13px;
+}
+
+.btnContact button:hover {
+    opacity: 0.8;
 }

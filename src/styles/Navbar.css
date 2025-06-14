@@ -3,12 +3,12 @@
     margin: 0;
     box-sizing: border-box;
     /* background-color: #191627; */
+    scroll-behavior: smooth;
 }
 
 body {
     -webkit-tap-highlight-color: transparent;
     font-family: 'Poppins', sans-serif;
-    height: 1000vh;
 }
 
 /* body.light {

@@ -16,14 +16,18 @@ export default function HeroSection() {
 
                 </div>
 
-                <div className="content-container">
+                <div className="hero-responsive">
+                    <div className="content-container">
 
-                </div>
+                    </div>
 
-                <div className="blob-image">
-                    <BlobImage />
+                    <div className="blob-image">
+                        <BlobImage />
+                    </div>
+
                 </div>
             </div>
+
         </>
     )
 }

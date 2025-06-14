@@ -1,5 +1,6 @@
 * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 
@@ -12,16 +13,16 @@
     padding-top: 120px;
     margin-left: 80px;
     height: 90vh;
-    /* width: 90%; */
+
 }
 
 
 .social-icons {
     display: flex;
-    flex-direction: column;
     position: absolute;
+    flex-direction: column;
     padding-top: 90px;
-    /* width: 10%; */
+
     align-items: center;
     justify-content: center;
     padding-left: 50px;
@@ -41,7 +42,11 @@
     scale: 1.2;
 }
 
-.hello-text,
+.hello-text {
+    font-size: 36px;
+    font-weight: 600;
+}
+
 .name-animation {
     /* color: #F2F1F3; */
     font-weight: 600;
@@ -64,7 +69,7 @@
 }
 
 .briefing {
-    /* color: #BCBAC4; */
+    width: 452px;
     font-weight: 300;
 }
 
@@ -89,4 +94,57 @@
 
 .btnContact button:hover {
     opacity: 0.8;
+}
+
+
+@media screen and (max-width:768px) {
+
+    .hero-container {
+        flex-direction: column-reverse;
+        margin-left: 0px;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px;
+    }
+
+    .social-icons {
+        padding-left: 0px;
+        margin-left: 20px;
+        padding-top: 0;
+        justify-content: unset;
+        margin-top: 160px;
+        height: 90vh;
+    }
+
+    .hello-text {
+
+        font-size: 25px;
+        height: 1.1;
+    }
+
+    .name-animation {
+        font-size: 30px;
+        height: 1.1;
+    }
+
+    .content-container {
+        position: absolute;
+        text-align: left;
+
+        /* height: 1.1; */
+        padding-top: 155px;
+        /* background: red; */
+        width: 330px;
+    }
+
+
+    .content-container .job-title {
+        font-size: 32px;
+        line-height: 1.9;
+    }
+
+    .briefing {
+        width: fit-content;
+    }
+
 }

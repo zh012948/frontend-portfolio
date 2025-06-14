@@ -34,7 +34,7 @@ export default function HeroSection() {
                     </div>
 
                     <div className="briefing">
-                        Strong expertise in front-end development and web design, delivering <br /> high-quality, responsive, and user-friendly digital experiences.
+                        Strong expertise in front-end development and web design. delivering  high-quality, responsive, and user-friendly digital experiences.
                     </div>
 
                     <div className="btnContact">

@@ -4,6 +4,7 @@ import instagram from '../assets/images/instagram.png'
 import github from '../assets/images/github.png'
 import BlobImage from '../components/BlobImage'
 import arrow from '../assets/images/arrow.png'
+import TypingAnimation from '../components/TypingAnimation'
 
 export default function HeroSection() {
     return (
@@ -30,7 +31,7 @@ export default function HeroSection() {
                     </div>
 
                     <div className="job-title">
-                        Frontend Engineer
+                        <TypingAnimation />
                     </div>
 
                     <div className="briefing">

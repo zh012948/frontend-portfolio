@@ -132,14 +132,14 @@
         text-align: left;
 
         /* height: 1.1; */
-        padding-top: 155px;
+        padding-top: 330px;
         /* background: red; */
         width: 330px;
     }
 
 
     .content-container .job-title {
-        font-size: 32px;
+        font-size: 30px;
         line-height: 1.9;
     }
 

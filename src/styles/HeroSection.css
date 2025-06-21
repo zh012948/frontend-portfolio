@@ -1,19 +1,29 @@
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
+body {
+    height: 1000vh;
+
+}
+
+.hero-section {
+    display: flex;
+    /* align-items: start; */
+    /* justify-content: center; */
+    /* justify-items: center; */
+}
 
 
 .hero-container {
     display: flex;
-    position: relative;
-    justify-content: space-evenly;
+    flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
-    padding-top: 120px;
-    margin-left: 80px;
-    height: 90vh;
-
+    padding-top: 25px;
+    /* height: 100vh; */
 }
 
 
@@ -21,16 +31,15 @@
     display: flex;
     position: absolute;
     flex-direction: column;
-    padding-top: 90px;
-
+    padding-top: 85px;
     align-items: center;
     justify-content: center;
-    padding-left: 50px;
-    margin-left: 40px;
-    margin-right: 40px;
+    padding-left: 20px;
+    /* margin-left: 40px; */
+    /* margin-right: 40px; */
     gap: 20px;
     z-index: 99;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .social-icons a img {
@@ -42,22 +51,24 @@
     scale: 1.2;
 }
 
+
 .hello-text {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 600;
 }
 
 .name-animation {
     /* color: #F2F1F3; */
     font-weight: 600;
-    font-size: 48px;
-    line-height: 1.2;
+    font-size: 34px;
+    line-height: 1;
 }
 
 .content-container {
     position: relative;
-    margin-top: 40px;
-    line-height: 1.4;
+    padding: 12px;
+    margin-top: 0px;
+    line-height: 1.1;
 }
 
 .content-container .job-title {
@@ -69,7 +80,10 @@
 }
 
 .briefing {
-    width: 452px;
+    /* width: 452px; */
+    padding: 3px;
+    width: fit-content;
+    /* background: red; */
     font-weight: 300;
 }
 
@@ -94,57 +108,4 @@
 
 .btnContact button:hover {
     opacity: 0.8;
-}
-
-
-@media screen and (max-width:768px) {
-
-    .hero-container {
-        flex-direction: column-reverse;
-        margin-left: 0px;
-        justify-content: center;
-        align-items: center;
-        padding-top: 80px;
-    }
-
-    .social-icons {
-        padding-left: 0px;
-        margin-left: 20px;
-        padding-top: 0;
-        justify-content: unset;
-        margin-top: 160px;
-        height: 90vh;
-    }
-
-    .hello-text {
-
-        font-size: 25px;
-        height: 1.1;
-    }
-
-    .name-animation {
-        font-size: 30px;
-        height: 1.1;
-    }
-
-    .content-container {
-        position: absolute;
-        text-align: left;
-
-        /* height: 1.1; */
-        padding-top: 330px;
-        /* background: red; */
-        width: 330px;
-    }
-
-
-    .content-container .job-title {
-        font-size: 30px;
-        line-height: 1.9;
-    }
-
-    .briefing {
-        width: fit-content;
-    }
-
 }

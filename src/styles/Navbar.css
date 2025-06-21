@@ -6,6 +6,9 @@
     scroll-behavior: smooth;
 }
 
+
+/* Mobile Responsiveness */
+
 body {
     -webkit-tap-highlight-color: transparent;
     font-family: 'Poppins', sans-serif;
@@ -51,7 +54,7 @@ body {
     padding-right: 10px;
     padding-bottom: 10px;
     bottom: 0px;
-    left: 8px;
+    left: 0px;
 }
 
 .navbar .navlinks ul li a {
@@ -116,6 +119,8 @@ body {
 }
 
 
+/* Mobile Medium Screen  */
+
 @media screen and (min-width: 320px) {
 
     .navbar ul {
@@ -125,7 +130,7 @@ body {
 }
 
 
-/* Laptop */
+/* Laptop and Desktop*/
 
 @media screen and (min-width: 1024px) {
 

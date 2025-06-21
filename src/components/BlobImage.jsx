@@ -6,6 +6,7 @@ const App = () => {
     return (
         <div className="blob-container">
             <img src={blobImage} alt="Blob" className="blob-image" />
+
         </div>
     );
 };

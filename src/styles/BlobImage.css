@@ -52,9 +52,11 @@
 @media screen and (min-width: 1024px) {
     .blob-container {
         margin-top: 0;
+        width: 280px;
+        height: 280px;
     }
 
     .blob-image {
-        top: 0;
+        top: 16px;
     }
 }

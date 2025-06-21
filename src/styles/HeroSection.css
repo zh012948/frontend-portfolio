@@ -4,10 +4,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    height: 1000vh;
 
-}
 
 .hero-section {
     display: flex;
@@ -108,4 +105,40 @@ body {
 
 .btnContact button:hover {
     opacity: 0.8;
+}
+
+
+/* Laptop and Desktop*/
+
+@media screen and (min-width: 1024px) {
+
+    .hero-section {
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+
+
+
+    .hero-container {
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 25px;
+        /* height: 100vh; */
+    }
+
+    .content-container {
+        margin-top: 50px;
+    }
+
+    .briefing {
+        width: 452px;
+        font-weight: 300;
+    }
+
+    .social-icons {
+        position: relative;
+    }
 }

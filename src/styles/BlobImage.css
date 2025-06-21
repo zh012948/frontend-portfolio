@@ -45,3 +45,16 @@
         left: 25px;
     }
 }
+
+
+/* Laptop and Desktop*/
+
+@media screen and (min-width: 1024px) {
+    .blob-container {
+        margin-top: 0;
+    }
+
+    .blob-image {
+        top: 0;
+    }
+}

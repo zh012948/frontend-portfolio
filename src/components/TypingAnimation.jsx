@@ -9,7 +9,7 @@ const TypingAnimation = () => {
     useEffect(() => {
         typedInstance.current = new Typed(typedElement.current, {
             strings: ['Frontend Engineer', 'React Developer', 'JavaScript Enthusiast', 'MERN Stack Developer'],
-            typeSpeed: 50,
+            typeSpeed: 30,
             backSpeed: 30,
             loop: true,
         });

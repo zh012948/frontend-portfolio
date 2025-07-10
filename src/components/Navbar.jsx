@@ -46,6 +46,7 @@ export default function Navbar() {
                     transition: 'background-color 0.3s ease',
                 }}
             >
+            
                 <ul>
                     {navItems.map(({ icon, label }, index) => (
                         <li key={index}>

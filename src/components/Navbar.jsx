@@ -82,11 +82,23 @@ export default function Navbar() {
 
             // Animate stars
             let animationFrameId;
-            function animateStars() {
-                twinkle();
+
+            let lastTwinkleTime = 0;
+            const twinkleInterval = 200; // milliseconds → increase this for slower twinkle
+
+            function animateStars(timestamp) {
+                if (!lastTwinkleTime) lastTwinkleTime = timestamp;
+
+                if (timestamp - lastTwinkleTime > twinkleInterval) {
+                    twinkle();
+                    lastTwinkleTime = timestamp;
+                }
+
                 drawStars();
                 animationFrameId = requestAnimationFrame(animateStars);
             }
+
+
             animateStars();
 
             return () => {

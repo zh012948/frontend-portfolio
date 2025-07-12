@@ -8,113 +8,97 @@ export default function Navbar() {
     const canvasRef = useRef(null);
 
     useEffect(() => {
-        // Set body styles
-        const textColor = darkMode ? '#ffffff' : '#000000';
-        document.body.style.color = textColor;
-        document.body.style.transition = 'color 0.3s ease';
-        document.documentElement.style.backgroundColor = darkMode ? 'transparent' : '#ffffff';
-        document.body.style.backgroundColor = darkMode ? 'transparent' : '#ffffff';
+        const canvas = canvasRef.current;
+        let ctx;
+        let stars = [];
+        let animationFrameId;
+        let gradient;
 
-        // Toggle dark-mode class
-        if (darkMode) {
-            document.body.classList.add('dark-mode');
-        } else {
-            document.body.classList.remove('dark-mode');
+        function createGradient(width, height) {
+            const g = ctx.createLinearGradient(0, 0, width, height);
+            g.addColorStop(0, '#0a0c1f');
+            g.addColorStop(0.5, '#191627');
+            g.addColorStop(1, '#2c1a3d');
+            return g;
         }
 
-        // Canvas star effect for dark mode
-        if (darkMode && canvasRef.current) {
-            const canvas = canvasRef.current;
-            canvas.style.display = 'block';
-            const ctx = canvas.getContext('2d');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+        function generateStars(num, width, height) {
+            return Array.from({ length: num }, () => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: Math.random() * 1.5,
+                alpha: Math.random() * 0.5 + 0.2,
+            }));
+        }
 
-            // Draw gradient background on canvas
-            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-            gradient.addColorStop(0, '#0a0c1f');
-            gradient.addColorStop(0.5, '#191627');
-            gradient.addColorStop(1, '#2c1a3d');
+        function drawStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            // Resize canvas on window resize
-            const handleResize = () => {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                ctx.fillStyle = gradient;
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                drawStars();
-            };
-            window.addEventListener('resize', handleResize);
-
-            // Generate stars
-            const stars = [];
-            const numStars = 200;
-            for (let i = 0; i < numStars; i++) {
-                stars.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    radius: Math.random() * 1.5,
-                    alpha: Math.random() * 0.5 + 0.2,
-                });
-            }
-
-            // Twinkle animation
-            function twinkle() {
-                stars.forEach(star => {
-                    star.alpha = Math.random() * 0.5 + 0.2;
-                });
-            }
-
-            // Draw stars
-            function drawStars() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = gradient;
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                stars.forEach(star => {
-                    ctx.beginPath();
-                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
-                    ctx.fill();
-                });
-            }
-
-            // Animate stars
-            let animationFrameId;
-
-            let lastTwinkleTime = 0;
-            const twinkleInterval = 200; // milliseconds → increase this for slower twinkle
-
-            function animateStars(timestamp) {
-                if (!lastTwinkleTime) lastTwinkleTime = timestamp;
-
-                if (timestamp - lastTwinkleTime > twinkleInterval) {
-                    twinkle();
-                    lastTwinkleTime = timestamp;
-                }
-
-                drawStars();
-                animationFrameId = requestAnimationFrame(animateStars);
-            }
-
-
-            animateStars();
-
-            return () => {
-                window.removeEventListener('resize', handleResize);
-                cancelAnimationFrame(animationFrameId);
-            };
-        } else if (canvasRef.current) {
-            // Hide canvas in light mode
-            canvasRef.current.style.display = 'none';
+            stars.forEach((star) => {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+                ctx.fill();
+            });
         }
+
+        function twinkle() {
+            stars.forEach((star) => {
+                star.alpha = Math.random() * 0.5 + 0.2;
+            });
+        }
+
+        function handleResize() {
+            if (!canvas) return;
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            gradient = createGradient(canvas.width, canvas.height);
+            stars = generateStars(200, canvas.width, canvas.height);
+            drawStars();
+        }
+
+        function animateStars(timestamp) {
+            if (!animateStars.lastTwinkleTime) animateStars.lastTwinkleTime = timestamp;
+            const interval = 200;
+            if (timestamp - animateStars.lastTwinkleTime > interval) {
+                twinkle();
+                animateStars.lastTwinkleTime = timestamp;
+            }
+            drawStars();
+            animationFrameId = requestAnimationFrame(animateStars);
+        }
+
+        if (darkMode && canvas) {
+            canvas.style.display = 'block';
+            ctx = canvas.getContext('2d');
+            handleResize();
+            window.addEventListener('resize', handleResize);
+            animationFrameId = requestAnimationFrame(animateStars);
+        } else if (canvas) {
+            canvas.style.display = 'none';
+        }
+
+        // Update body styles
+        const textColor = darkMode ? '#ffffff' : '#000000';
+        const bgColor = darkMode ? 'transparent' : '#ffffff';
+        document.body.style.color = textColor;
+        document.documentElement.style.backgroundColor = bgColor;
+        document.body.style.backgroundColor = bgColor;
+        document.body.classList.toggle('dark-mode', darkMode);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+        };
     }, [darkMode]);
 
     const navbarBg = darkMode ? 'rgba(25, 22, 39, 0.8)' : '#ffffff';
     const navlinksBg = darkMode ? 'rgba(25, 22, 39, 0.8)' : '#ffffff';
     const linkColor = darkMode ? '#ffffff' : '#191627';
-    const hoverColor = darkMode ? '#6E57E0' : '#6E57E0';
+    const hoverColor = '#6E57E0';
 
     const navItems = [
         { icon: 'bx-home-circle', label: 'Home' },

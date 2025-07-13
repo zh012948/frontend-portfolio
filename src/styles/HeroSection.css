@@ -28,10 +28,11 @@
     display: flex;
     position: absolute;
     flex-direction: column;
-    padding-top: 85px;
+    margin-top: 85px;
     align-items: center;
     justify-content: center;
-    padding-left: 20px;
+    margin-left: 20px;
+
     /* margin-left: 40px; */
     /* margin-right: 40px; */
     gap: 20px;
@@ -45,7 +46,11 @@
 }
 
 .social-icons a img:hover {
-    scale: 1.2;
+    scale: 1.4;
+    /* box-shadow: 0 0 10px #6E57E0,
+        0 0 20px #6E57E0,
+        0 0 30px #6E57E0,
+        0 0 40px #6E57E0; */
 }
 
 

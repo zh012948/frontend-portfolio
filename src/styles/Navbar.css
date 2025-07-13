@@ -9,7 +9,7 @@
 body {
     -webkit-tap-highlight-color: transparent;
     font-family: 'Poppins', sans-serif;
-    height: 1000vh;
+    height: 100vh;
 }
 
 /* Canvas for stars */
@@ -20,7 +20,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    /* Behind all content */
 }
 
 /* Light mode background */
@@ -36,8 +35,7 @@ body:not(.dark-mode) {
 }
 
 .logo:hover {
-    color: Hawkins #6E57E0;
-    scale: 1.2;
+    color: #6E57E0;
 }
 
 /* Navbar styles */
@@ -50,12 +48,12 @@ body:not(.dark-mode) {
     justify-content: space-between;
     padding: 15px;
     z-index: 1000;
+    transition: transform 0.3s ease;
 }
 
 .navbar.dark-mode {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* For Safari compatibility */
 }
 
 .navbar ul li {
@@ -78,7 +76,6 @@ body:not(.dark-mode) {
 .navbar .navlinks.dark-mode {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* For Safari compatibility */
 }
 
 .navbar .navlinks ul li a {
@@ -143,7 +140,7 @@ body:not(.dark-mode) {
 @media screen and (min-width: 1024px) {
     .navbar {
         top: 0;
-        left: 0;
+        bottom: unset;
         height: 60px;
         border-bottom: 1px solid black;
         justify-content: space-between;
@@ -179,7 +176,6 @@ body:not(.dark-mode) {
     .navbar ul {
         display: flex;
         align-items: center;
-        text-align: center;
         justify-content: center;
     }
 
@@ -191,5 +187,18 @@ body:not(.dark-mode) {
 @media screen and (min-width: 425px) {
     .navbar .navlinks {
         width: 80%;
+    }
+}
+
+/* Hiding Navbar (different on mobile vs desktop) */
+@media screen and (max-width: 1023px) {
+    .navbar.hidden {
+        transform: translateY(100%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar.hidden {
+        transform: translateY(-100%);
     }
 }

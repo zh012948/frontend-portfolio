@@ -1,8 +1,14 @@
+import '../styles/About.css'
+
 export default function About() {
     return (
         <>
+            <div className="about-section">
 
-            This is About Section
+                About Me
+
+            </div>
         </>
+
     )
 }

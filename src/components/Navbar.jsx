@@ -5,7 +5,9 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(true);
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    const [hideNavbar, setHideNavbar] = useState(false);
     const canvasRef = useRef(null);
+    const lastScrollY = useRef(0);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -79,7 +81,6 @@ export default function Navbar() {
             canvas.style.display = 'none';
         }
 
-        // Update body styles
         const textColor = darkMode ? '#ffffff' : '#000000';
         const bgColor = darkMode ? 'transparent' : '#ffffff';
         document.body.style.color = textColor;
@@ -94,6 +95,26 @@ export default function Navbar() {
             }
         };
     }, [darkMode]);
+
+    // NEW: Navbar hide/show on scroll
+    useEffect(() => {
+        function handleScroll() {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+                // Scrolling down
+                setHideNavbar(true);
+            } else {
+                // Scrolling up
+                setHideNavbar(false);
+            }
+
+            lastScrollY.current = currentScrollY;
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const navbarBg = darkMode ? 'rgba(25, 22, 39, 0.8)' : '#ffffff';
     const navlinksBg = darkMode ? 'rgba(25, 22, 39, 0.8)' : '#ffffff';
@@ -113,10 +134,10 @@ export default function Navbar() {
         <>
             <canvas ref={canvasRef} className="star-canvas" />
             <div
-                className={`navbar ${darkMode ? 'dark-mode' : ''}`}
+                className={`navbar ${darkMode ? 'dark-mode' : ''} ${hideNavbar ? 'hidden' : ''}`}
                 style={{
                     backgroundColor: navbarBg,
-                    transition: 'background-color 0.3s ease',
+                    transition: 'background-color 0.3s ease, transform 0.3s ease',
                     borderBottom: darkMode ? '1px solid #444' : '1px solid #ccc',
                 }}
             >

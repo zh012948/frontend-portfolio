@@ -6,10 +6,12 @@
 }
 
 /* Mobile Responsiveness */
+html,
 body {
     -webkit-tap-highlight-color: transparent;
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
+    background: #0a0c1f;
 }
 
 /* Canvas for stars */
@@ -17,8 +19,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     z-index: -1;
 }
 

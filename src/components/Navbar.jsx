@@ -9,6 +9,8 @@ export default function Navbar() {
     const canvasRef = useRef(null);
     const lastScrollY = useRef(0);
 
+    const navbarHeight = 60; // adjust to match your CSS navbar height
+
     useEffect(() => {
         const canvas = canvasRef.current;
         let ctx;
@@ -18,9 +20,14 @@ export default function Navbar() {
 
         function createGradient(width, height) {
             const g = ctx.createLinearGradient(0, 0, width, height);
-            g.addColorStop(0, '#0a0c1f');
-            g.addColorStop(0.5, '#191627');
-            g.addColorStop(1, '#2c1a3d');
+            if (darkMode) {
+                g.addColorStop(0, '#0a0c1f');
+                g.addColorStop(0.5, '#191627');
+                g.addColorStop(1, '#2c1a3d');
+            } else {
+                g.addColorStop(0, '#ffffff');
+                g.addColorStop(1, '#f0f0f0');
+            }
             return g;
         }
 
@@ -54,7 +61,7 @@ export default function Navbar() {
         function handleResize() {
             if (!canvas) return;
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            canvas.height = window.innerHeight + navbarHeight;
             gradient = createGradient(canvas.width, canvas.height);
             stars = generateStars(200, canvas.width, canvas.height);
             drawStars();
@@ -71,14 +78,11 @@ export default function Navbar() {
             animationFrameId = requestAnimationFrame(animateStars);
         }
 
-        if (darkMode && canvas) {
-            canvas.style.display = 'block';
+        if (canvas) {
             ctx = canvas.getContext('2d');
             handleResize();
             window.addEventListener('resize', handleResize);
             animationFrameId = requestAnimationFrame(animateStars);
-        } else if (canvas) {
-            canvas.style.display = 'none';
         }
 
         const textColor = darkMode ? '#ffffff' : '#000000';
@@ -96,22 +100,16 @@ export default function Navbar() {
         };
     }, [darkMode]);
 
-    // NEW: Navbar hide/show on scroll
     useEffect(() => {
         function handleScroll() {
             const currentScrollY = window.scrollY;
-
             if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
-                // Scrolling down
                 setHideNavbar(true);
             } else {
-                // Scrolling up
                 setHideNavbar(false);
             }
-
             lastScrollY.current = currentScrollY;
         }
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -138,7 +136,8 @@ export default function Navbar() {
                 style={{
                     backgroundColor: navbarBg,
                     transition: 'background-color 0.3s ease, transform 0.3s ease',
-                    borderBottom: darkMode ? '1px solid #444' : '1px solid #ccc',
+                    borderTop: darkMode ? '1px solid #444' : '1px solid #ccc',
+                    height: `${navbarHeight}px`,
                 }}
             >
                 <div className="logo">Zeeshan</div>

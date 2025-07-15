@@ -5,9 +5,13 @@ import About from "./components/About"
 const App = () => {
   return (
     <>
+
+      {/* New Folder */}
+
       <Navbar />
       <HeroSection />
       <About />
+
     </>
   );
 };

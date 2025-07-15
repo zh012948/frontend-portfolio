@@ -14,7 +14,7 @@ const TypingAnimation = () => {
                 'JavaScript Enthusiast',
                 'MERN Stack Developer'],
 
-            typeSpeed: 70,
+            typeSpeed: 40,
             backSpeed: 50,
             loop: true,
         });

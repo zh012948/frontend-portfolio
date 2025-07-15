@@ -3,3 +3,43 @@
     padding-top: 60px;
     height: 100vh;
 }
+
+
+.btnGetInTouch {
+    padding: 10px 12px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background: #7F6CE0;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+
+.btnResume {
+    padding: 10px 12px;
+    border-radius: 15px;
+    outline: none;
+    border: 1.3px solid #7F6CE0;
+    background: transparent;
+    color: #7F6CE0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btnGetInTouch:hover {
+    opacity: 0.8;
+}
+
+.btnGetInTouch:active {
+    opacity: 1.1;
+}
+
+
+.btnResume:hover {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+}

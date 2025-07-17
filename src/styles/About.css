@@ -20,6 +20,11 @@
 
 }
 
+.btnResume {
+    text-decoration: none;
+}
+
+
 .btnGetInTouch,
 .btnResume {
     padding: 10px 12px;

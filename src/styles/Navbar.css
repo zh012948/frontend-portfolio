@@ -9,7 +9,7 @@
 html,
 body {
     -webkit-tap-highlight-color: transparent;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     background: #0a0c1f;
 }

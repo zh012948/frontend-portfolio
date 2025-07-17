@@ -1,4 +1,9 @@
 import '../styles/About.css'
+import AboutBox from './AboutBox'
+import html from '../assets/images/html.png'
+import briefcase from '../assets/images/briefcase.png'
+import user from '../assets/images/user.png'
+
 
 export default function About() {
     return (
@@ -35,7 +40,23 @@ export default function About() {
                     </div>
 
                     <div className="about-boxes">
+                        <AboutBox
+                            image={html}
+                            title="Web Developement"
+                            description="Developing modern, full-stack web applications with a focus on performance, scalability, and user accessibility."
+                        />
 
+                        <AboutBox
+                            image={briefcase}
+                            title="UI/UX Design"
+                            description="Crafting clean, user-centered interfaces that balance aesthetics with usability to deliver smooth user experiences."
+                        />
+
+                        <AboutBox
+                            image={user}
+                            title="Project Management"
+                            description="Managing and delivering end-to-end solutions using agile workflows, from ideation and design to deployment and iteration."
+                        />
                     </div>
                 </div>
             </div>

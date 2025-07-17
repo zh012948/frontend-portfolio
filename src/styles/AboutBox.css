@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 1000vh;
+
+}
+
+
+
+.side-image img {
+    width: 45px;
+}
+
+.box-container {
+    display: flex;
+    background: linear-gradient(135deg, #2a2a49, #0d121f, #100741);
+
+}
+
+.box-container .box-content .title {
+    color: #7F6CE0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.box-container .box-content {
+    line-height: 1.4;
+    text-align: left;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* Laptop and Desktop Responsive */
+
+@media screen and (min-width: 1024px) {
+
+
+
+
+    .box-container {
+        width: 576px;
+        padding: 20px 16px;
+        gap: 20px;
+        border-radius: 10px;
+        transition: 0.2s ease;
+    }
+
+    .box-container:hover {
+        box-shadow: 3px 5px 7px #7F6CE0;
+    }
+
+
+
+}

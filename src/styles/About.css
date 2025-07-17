@@ -1,9 +1,20 @@
 .about-section {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.about-section {
     text-align: center;
     padding-top: 60px;
     height: 100vh;
 }
 
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+
+}
 
 .btnGetInTouch {
     padding: 8px 16px;
@@ -50,11 +61,17 @@
 
 
 
+.about-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 
 .about-content .content {
     text-align: justify;
     padding: 15px;
     font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .about-content .role {
@@ -63,4 +80,37 @@
     font-size: 30px;
     font-weight: 600;
     line-height: 1.5;
+}
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+
+    .about-container {
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px;
+        flex-direction: row;
+    }
+
+
+    .about-content {
+        width: 550px;
+    }
+
+    .about-content .content {
+        line-height: 1.4;
+    }
+
+
+    .about-content .content {
+
+        margin-bottom: 4px;
+    }
+
+
+
+
 }

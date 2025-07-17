@@ -12,7 +12,9 @@ const TypingAnimation = () => {
                 'Frontend Engineer',
                 'React Developer',
                 'JavaScript Enthusiast',
-                'MERN Stack Developer'],
+                'MERN Stack Developer',
+                'Programmer'
+            ],
 
             typeSpeed: 40,
             backSpeed: 50,

@@ -32,9 +32,18 @@ body {
 }
 
 
+.box-container:hover {
+    box-shadow: 3px 5px 7px #7F6CE0;
+}
 
 
-
+.box-container {
+    width: fit-content;
+    padding: 20px 16px;
+    gap: 20px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
 
 
 
@@ -47,15 +56,10 @@ body {
 
     .box-container {
         width: 576px;
-        padding: 20px 16px;
-        gap: 20px;
-        border-radius: 10px;
-        transition: 0.2s ease;
+
     }
 
-    .box-container:hover {
-        box-shadow: 3px 5px 7px #7F6CE0;
-    }
+
 
 
 

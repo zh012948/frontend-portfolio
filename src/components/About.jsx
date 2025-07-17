@@ -34,9 +34,16 @@ export default function About() {
                             Get in Touch
                         </button>
 
-                        <button className="btnResume">
+                        <a
+                            className="btnResume"
+                            href="/assets/Muhammad_Zeeshan_Haider_Resume.pdf"
+                            download="Muhammad_Zeeshan_Haider_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Check Resume
-                        </button>
+                        </a>
+
                     </div>
 
                     <div className="about-boxes">

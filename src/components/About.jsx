@@ -17,7 +17,7 @@ export default function About() {
 
                     <div className="about-content">
                         <p className="role">
-                            Passionate Web devloper
+                            Passionate Web developer
                         </p>
 
                         <p className="content">

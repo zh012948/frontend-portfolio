@@ -14,11 +14,11 @@ export default function AboutBox(props) {
                 <div className="box-content">
 
                     <div className="title">
-                        Web Developement
+                        {props.title}
                     </div>
 
                     <div className="content">
-                        Developing modern, full-stack web applications with a focus on performance, scalability, and user accessibility.
+                        {props.description}
                     </div>
 
                 </div>

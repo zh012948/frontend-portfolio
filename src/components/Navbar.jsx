@@ -120,13 +120,14 @@ export default function Navbar() {
     const hoverColor = '#6E57E0';
 
     const navItems = [
-        { icon: 'bx-home-circle', label: 'Home' },
-        { icon: 'bx-user-circle', label: 'About' },
-        { icon: 'bx-file', label: 'Skills' },
-        { icon: 'bx-briefcase-alt-2', label: 'Services' },
-        { icon: 'bx-image', label: 'Portfolio' },
-        { icon: 'bx-send', label: 'Contact Me' },
+        { icon: 'bx-home-circle', label: 'Home', to: '#home' },
+        { icon: 'bx-user-circle', label: 'About', to: '#about' },
+        { icon: 'bx-file', label: 'Skills', to: '#skills' },
+        { icon: 'bx-briefcase-alt-2', label: 'Services', to: '#services' },
+        { icon: 'bx-image', label: 'Portfolio', to: '#portfolio' },
+        { icon: 'bx-send', label: 'Contact Me', to: '#contact' },
     ];
+
 
     return (
         <>
@@ -150,12 +151,13 @@ export default function Navbar() {
                     }}
                 >
                     <ul>
-                        {navItems.map(({ icon, label }, index) => (
+                        {navItems.map(({ icon, label, to }, index) => (
                             <li key={index}>
                                 <a
-                                    href="#"
+                                    href={to}
                                     onMouseEnter={() => setHoveredIndex(index)}
                                     onMouseLeave={() => setHoveredIndex(null)}
+                                    onClick={() => setMenuOpen(false)} // ✅ this closes the menu on click
                                     style={{
                                         color: hoveredIndex === index ? hoverColor : linkColor,
                                         textDecoration: 'none',

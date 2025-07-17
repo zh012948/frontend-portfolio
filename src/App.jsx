@@ -9,7 +9,10 @@ const App = () => {
       {/* New Folder */}
 
       <Navbar />
-      <HeroSection />
+      <section id="home">
+        <HeroSection />
+      </section>
+      <section id="about"></section>
       <About />
 
     </>

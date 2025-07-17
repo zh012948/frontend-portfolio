@@ -1,5 +1,4 @@
 import '../styles/AboutBox.css'
-import html from '../assets/images/html.png'
 
 
 export default function AboutBox(props) {

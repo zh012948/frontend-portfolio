@@ -46,13 +46,7 @@
     transition: 0.2s ease;
 }
 
-.social-icons a img:hover {
-    scale: 1.4;
-    /* box-shadow: 0 0 10px #6E57E0,
-        0 0 20px #6E57E0,
-        0 0 30px #6E57E0,
-        0 0 40px #6E57E0; */
-}
+
 
 
 .hello-text {
@@ -109,9 +103,7 @@
     width: 13px;
 }
 
-.btnContact button:hover {
-    opacity: 0.8;
-}
+
 
 
 /* Laptop */
@@ -147,4 +139,20 @@
     .social-icons {
         position: relative;
     }
+
+
+
+    .social-icons a img:hover {
+    scale: 1.4;
+    /* box-shadow: 0 0 10px #6E57E0,
+        0 0 20px #6E57E0,
+        0 0 30px #6E57E0,
+        0 0 40px #6E57E0; */
+}
+
+
+
+.btnContact button:hover {
+    opacity: 0.8;
+}
 }

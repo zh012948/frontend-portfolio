@@ -42,10 +42,6 @@
 
 
 
-.btnGetInTouch:hover,
-.btnResume:hover {
-    opacity: 0.8;
-}
 
 .btnGetInTouch:active,
 .btnResume:active {
@@ -124,5 +120,9 @@
     .btnResume:hover {
         opacity: 0.8;
     }
+
+
+
+
 
 }

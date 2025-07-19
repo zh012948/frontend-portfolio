@@ -11,12 +11,19 @@
 
 .skill-card-container {
     width: 300px;
-    border: 1px solid gray;
     padding: 15px;
     border-radius: 8px;
-    backdrop-filter: blur(450px);
-
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    /* Semi-transparent background */
+    backdrop-filter: blur(20px);
+    /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(20px);
+    /* For Safari support */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
 }
+
 
 .skill-icon-background {
     background: #2b3749;
@@ -27,4 +34,36 @@
 .skill-card-container .title {
     font-size: 20px;
     font-weight: 500;
+    color: linear-gradient(135deg, #ffffff, #dcdcdc);
+
+}
+
+
+
+
+.bottom {
+    margin-top: 12px;
+}
+
+.bottom .skill-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 15px;
+    width: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    padding: 8px;
+
+}
+
+
+.bottom .skill-box .box-img {
+    width: 12px;
+
+}
+
+.bottom .skill-box .box-title {
+    font-size: 12px;
 }

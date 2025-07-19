@@ -1,6 +1,6 @@
 import '../styles/SkillCard1.css'
 import dev from '../assets/icons/dev.png'
-
+import react from '../assets/icons/react.svg'
 export default function SkillCard1() {
     return (
         <>
@@ -16,6 +16,17 @@ export default function SkillCard1() {
                         Frontend Development
                     </p>
 
+                </div>
+
+
+                <div className="bottom">
+
+                    <div className="skill-box">
+
+                        <img src={react} className='box-img' />
+                        <p className="box-title">React</p>
+
+                    </div>
                 </div>
 
 

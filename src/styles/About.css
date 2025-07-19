@@ -1,7 +1,5 @@
 /* Mobile First Approach */
 
-
-
 .about-section {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -41,16 +39,10 @@
 }
 
 
-
-
 .btnGetInTouch:active,
 .btnResume:active {
     scale: 0.9;
 }
-
-
-
-
 
 
 .about-boxes {
@@ -77,7 +69,25 @@
 }
 
 
+.heading {
+    /* text-decoration: underline; */
+    position: relative;
+}
 
+
+.heading::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: center;
+    text-align: center;
+    align-items: center;
+    width: 145px;
+    background: #7F6CE0;
+    height: 1.6px;
+
+
+}
 
 
 @media screen and (min-width: 1024px) {

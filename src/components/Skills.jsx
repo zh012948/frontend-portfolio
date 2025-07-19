@@ -17,7 +17,10 @@ import mongo from '../assets/icons/MongoDB.png'
 import Rest from '../assets/icons/Rest.png'
 import GraphQL from '../assets/icons/GraphQL.png'
 
-// import uxDesign from '../assets/icons/uxDesign.png'
+import uxDesign from '../assets/icons/uxDesign.png'
+import figma from '../assets/icons/Figma.png'
+import responsive from '../assets/icons/responsive.png'
+import wireframing from '../assets/icons/wireframing.png'
 
 import cloud from '../assets/icons/cloud.png'
 import aws from '../assets/icons/AWS.png'
@@ -35,6 +38,12 @@ import redux from '../assets/icons/Redux.png'
 import firebase from '../assets/icons/Firebase.png'
 import vercel from '../assets/icons/Vercel.png'
 import vite from '../assets/icons/Vite.png'
+
+import idea from '../assets/icons/idea.png'
+import problemSolving from '../assets/icons/problemSolving.png'
+import time from '../assets/icons/delay.png'
+import decision from '../assets/icons/decision.png'
+import critical from '../assets/icons/critical.png'
 
 export default function Skills() {
     return (
@@ -67,13 +76,13 @@ export default function Skills() {
                     />
 
 
-
-
-
-
-
                     <SkillCard2
+                        leftIcon={uxDesign}
                         role="UI/UX Design"
+                        skill1Icon={figma} skill1Text="Figma"
+                        skill2Icon={responsive} skill2Text="Responsive Design"
+                        skill3Icon={wireframing} skill3Text="Wireframing"
+                        skill4Icon={Kubernetes} skill4Text="Kubernetes"
                     />
 
 
@@ -102,7 +111,16 @@ export default function Skills() {
                     />
 
 
-                    <SkillCard1 />
+                    <SkillCard2
+                        leftIcon={idea}
+                        role="Creative Skills"
+                        skill1Icon={problemSolving} skill1Text="Problem Solving"
+                        skill2Icon={time} skill2Text="Time Management"
+                        skill3Icon={critical} skill3Text="Critical Thinking"
+                        skill4Icon={decision} skill4Text="Decision Making"
+
+
+                    />
 
                 </div>
             </div>

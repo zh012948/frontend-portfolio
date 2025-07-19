@@ -22,11 +22,26 @@ export default function SkillCard1() {
                 <div className="bottom">
 
                     <div className="skill-box">
-
                         <img src={react} className='box-img' />
                         <p className="box-title">React</p>
-
                     </div>
+
+                    <div className="skill-box">
+                        <img src={react} className='box-img' />
+                        <p className="box-title">React</p>
+                    </div>
+
+                    <div className="skill-box">
+                        <img src={react} className='box-img' />
+                        <p className="box-title">React</p>
+                    </div>
+
+
+                    <div className="skill-box">
+                        <img src={react} className='box-img' />
+                        <p className="box-title">React</p>
+                    </div>
+
                 </div>
 
 

@@ -69,13 +69,12 @@
 }
 
 
-.about-section .heading {
-    /* text-decoration: underline; */
+.heading {
     position: relative;
 }
 
 
-.about-section .heading::before {
+.heading::before {
     content: '';
     position: absolute;
     bottom: -7px;

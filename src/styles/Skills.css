@@ -4,22 +4,18 @@
 .skill-section {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-}
-
-
-.skill-section {
     padding-top: 60px;
-    height: 100vh;
+    min-height: 100vh;
+
 }
 
-.skill-section .heading {
-    /* text-decoration: underline; */
+.heading {
     text-align: center;
-    position: relative;
+    /* position: relative; */
 }
 
 
-.skill-section .heading::before {
+.heading::before {
     content: '';
     position: absolute;
     bottom: -7px;
@@ -34,5 +30,7 @@
 
 
 .skill-container {
-    /* display: grid; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
 }

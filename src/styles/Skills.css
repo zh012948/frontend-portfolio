@@ -2,6 +2,10 @@
 
 
 .skill-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     padding-top: 60px;
@@ -33,4 +37,5 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 40px;
+    gap: 20px;
 }

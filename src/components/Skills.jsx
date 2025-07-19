@@ -26,6 +26,15 @@ import Kubernetes from '../assets/icons/Kubernetes.png'
 import Git from '../assets/icons/Git.png'
 import Linux from '../assets/icons/Linux.png'
 
+
+import tool from '../assets/icons/tool.png'
+import vscode from '../assets/icons/vscode.png'
+import jest from '../assets/icons/Jest.png'
+import redux from '../assets/icons/Redux.png'
+import firebase from '../assets/icons/Firebase.png'
+import vercel from '../assets/icons/Vercel.png'
+import vite from '../assets/icons/Vite.png'
+
 export default function Skills() {
     return (
         <>
@@ -78,6 +87,18 @@ export default function Skills() {
                         skill6Icon={Linux} skill6Text="Linux"
                     />
 
+
+
+                    <SkillCard1
+                        leftIcon={tool}
+                        role="Tools & Technologies"
+                        skill1Icon={vscode} skill1Text="Vs Code"
+                        skill2Icon={jest} skill2Text="Jest"
+                        skill3Icon={redux} skill3Text="Redux"
+                        skill4Icon={firebase} skill4Text="Firebase"
+                        skill5Icon={vercel} skill5Text="Vercel"
+                        skill6Icon={vite} skill6Text="Vite"
+                    />
 
 
                     <SkillCard1 />

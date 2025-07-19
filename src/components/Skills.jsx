@@ -1,5 +1,6 @@
 import '../styles/Skills.css'
 import SkillCard1 from './SkillCard1'
+import SkillCard2 from './SkillCard2'
 import frontend from '../assets/icons/dev.png'
 import react from '../assets/icons/react.svg'
 import next from '../assets/icons/next.png'
@@ -71,7 +72,7 @@ export default function Skills() {
 
 
 
-                    <SkillCard1
+                    <SkillCard2
                         role="UI/UX Design"
                     />
 

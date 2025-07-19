@@ -1,0 +1,38 @@
+/* Laptop approach first here */
+
+
+.skill-section {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.skill-section {
+    padding-top: 60px;
+    height: 100vh;
+}
+
+.skill-section .heading {
+    /* text-decoration: underline; */
+    text-align: center;
+    position: relative;
+}
+
+
+.skill-section .heading::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: center;
+    text-align: center;
+    align-items: center;
+    width: 105px;
+    background: #7F6CE0;
+    height: 1.6px;
+
+}
+
+
+.skill-container {
+    /* display: grid; */
+}

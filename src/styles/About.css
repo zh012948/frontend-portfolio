@@ -69,23 +69,22 @@
 }
 
 
-.heading {
+.about-section .heading {
     /* text-decoration: underline; */
     position: relative;
 }
 
 
-.heading::before {
+.about-section .heading::before {
     content: '';
     position: absolute;
     bottom: -7px;
     left: center;
     text-align: center;
     align-items: center;
-    width: 145px;
+    width: 110px;
     background: #7F6CE0;
     height: 1.6px;
-
 
 }
 

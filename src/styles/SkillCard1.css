@@ -1,0 +1,30 @@
+/* Laptop First Approach */
+
+.skill-card-container .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+
+.skill-card-container {
+    width: 300px;
+    border: 1px solid gray;
+    padding: 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(450px);
+
+}
+
+.skill-icon-background {
+    background: #2b3749;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.skill-card-container .title {
+    font-size: 20px;
+    font-weight: 500;
+}

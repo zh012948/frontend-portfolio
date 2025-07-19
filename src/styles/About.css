@@ -8,14 +8,14 @@
 .about-section {
     text-align: center;
     padding-top: 60px;
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
 }
 
 
 .about-container {
     display: flex;
     flex-direction: column;
-
 }
 
 .btnResume {

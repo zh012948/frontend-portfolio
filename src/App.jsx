@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import About from "./components/About"
 import Skills from "./components/Skills"
 import Services from './components/Services'
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -25,6 +26,10 @@ const App = () => {
 
       <section id="services">
         <Services />
+      </section>
+
+      <section id="contact">
+        <Contact />
       </section>
     </>
   );

@@ -1,6 +1,7 @@
 .container {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+
 }
 
 
@@ -12,6 +13,8 @@
     border-radius: 30px;
     width: 320px;
     height: 450px;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
 .container .project-img {
@@ -101,4 +104,11 @@
 
 .container .lower .btnLive button:hover {
     opacity: 0.8;
+}
+
+
+
+.container:hover {
+    transform: translateY(-11px);
+
 }

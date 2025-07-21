@@ -1,0 +1,16 @@
+.project-section {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding-top: 60px;
+    min-height: 100vh;
+}
+
+.project-section .heading::before {
+    width: 102px;
+    text-align: center;
+}
+
+
+.project-container {
+    padding: 20px;
+}

@@ -11,11 +11,34 @@
     margin-bottom: 40px;
 }
 
+
+
+
+.contact-section .heading {
+    position: relative;
+}
+
+
+.contact-section .heading::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: center;
+    text-align: center;
+    align-items: center;
+    width: 130px;
+    background: #7F6CE0;
+    height: 1.6px;
+
+}
+
+
+
 .contact-heading h2 {
-    font-size: 40px;
+    /* font-size: 40px; */
     font-weight: 700;
 
-    margin-bottom: 10px;
+    margin-bottom: 100px;
 }
 
 .contact-heading p {
@@ -118,9 +141,6 @@
 }
 
 
-
-
-
 .success-msg {
     color: #7F6CE0;
     font-weight: 500;
@@ -128,15 +148,12 @@
     transition: opacity 0.3s ease;
 }
 
-
 .form-status {
     margin-top: 12px;
     font-weight: 500;
     color: #7F6CE0;
     transition: 0.3s ease;
 }
-
-
 
 
 

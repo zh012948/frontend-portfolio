@@ -4,6 +4,7 @@ import About from "./components/About"
 import Skills from "./components/Skills"
 import Services from './components/Services'
 import Contact from "./components/Contact";
+import Portfolio from "./components/Portfolio"
 
 const App = () => {
   return (
@@ -31,6 +32,11 @@ const App = () => {
       <section id="contact">
         <Contact />
       </section>
+
+      <section id="portfolio">
+        <Portfolio />
+      </section>
+
     </>
   );
 };

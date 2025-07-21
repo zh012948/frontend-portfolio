@@ -67,11 +67,12 @@
     padding: 12px;
     margin-top: 0px;
     line-height: 1.1;
+    transform: translateY(-80px);
 }
 
 .content-container .job-title {
     font-size: 27px;
-    line-height: 25px;
+    /* line-height: 25px; */
     font-weight: 700;
     line-height: 2.5;
 
@@ -130,7 +131,7 @@
     }
 
     .content-container {
-        margin-top: 50px;
+        margin-top: 160px;
     }
 
     .briefing {

@@ -9,6 +9,7 @@ import TypingAnimation from '../components/TypingAnimation'
 export default function HeroSection() {
     return (
         <>
+
             <div className="hero-section">
 
                 <div className="social-icons">

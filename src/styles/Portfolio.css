@@ -1,7 +1,7 @@
 .project-section {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    padding-top: 60px;
+    padding-top: 30px;
     min-height: 100vh;
 }
 
@@ -12,5 +12,11 @@
 
 
 .project-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 25px;
     padding: 20px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
 }

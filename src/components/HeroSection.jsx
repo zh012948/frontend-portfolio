@@ -40,7 +40,7 @@ export default function HeroSection() {
 
 
                         <div className="btnContact">
-                            <button>Contact Me <img src={arrow} /></button>
+                            <a href='#contact'>Contact Me <img src={arrow} /></a>
                         </div>
 
 

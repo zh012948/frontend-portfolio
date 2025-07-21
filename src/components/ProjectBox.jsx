@@ -1,5 +1,5 @@
 import '../styles/ProjectBox.css'
-import project1 from '../assets/projects/project1.png'
+import project1 from '/projects/project1.PNG'
 
 export default function ProjectBox() {
     return (
@@ -54,7 +54,7 @@ export default function ProjectBox() {
                     </div>
 
                     <div className="project-description">
-                        Built an image format converter web app using React, Node.js, Express and Sharp, featuring real-time image conversion, file upload with Multer, secure downloads, CORS integration and deployed on Render.
+                        Built a web app for image format conversion with real-time processing, secure file upload, downloads, and error handling.
                     </div>
 
                     <div className="btnLive">

@@ -127,3 +127,22 @@
         width: 100%;
     }
 }
+
+
+
+
+
+.success-msg {
+    color: #7F6CE0;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+
+.form-status {
+    margin-top: 12px;
+    font-weight: 500;
+    color: #7F6CE0;
+    transition: 0.3s ease;
+}

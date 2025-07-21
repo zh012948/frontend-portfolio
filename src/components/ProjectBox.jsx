@@ -1,68 +1,39 @@
-import '../styles/ProjectBox.css'
-import project1 from '/projects/project1.PNG'
+import '../styles/ProjectBox.css';
 
-export default function ProjectBox() {
+export default function ProjectBox(props) {
     return (
         <>
             <div className="container">
                 <div className="upper">
-                    <img src={project1} alt="project1" className="project-img" />
+                    <img src={props.image} alt="project" className="project-img" />
 
                     <div className="skill-list">
-
-                        <div className="lang">
-                            React Js
-                        </div>
-
-                        <div className="lang">
-                            Node Js
-                        </div>
-
-                        <div className="lang">
-                            CSS
-                        </div>
-
-
-                        <div className="lang">
-                            Render
-                        </div>
-
-                        <div className="lang">
-                            Sharp
-                        </div>
-
-                        <div className="lang">
-                            Sharp
-                        </div>
-
-                        <div className="lang">
-                            Sharp
-                        </div>
-
-                        <div className="lang">
-                            Sharp
-                        </div>
-
+                        {props.skills && props.skills.map((skill, index) => (
+                            <div className="lang" key={index}>
+                                {skill}
+                            </div>
+                        ))}
                     </div>
                 </div>
 
-
                 <div className="lower">
-
                     <div className="project-title">
-                        Image Format Converter
+                        {props.title}
                     </div>
 
                     <div className="project-description">
-                        Built a web app for image format conversion with real-time processing, secure file upload, downloads, and error handling.
+                        {props.description}
                     </div>
 
-                    <div className="btnLive">
-                        <button>View Live</button>
-                    </div>
+                    {props.link && (
+                        <div className="btnLive">
+                            <a href={props.link} target="_blank" rel="noopener noreferrer">
+                                <button>View Live</button>
+                            </a>
+                        </div>
+                    )}
                 </div>
-
             </div>
         </>
-    )
+    );
 }

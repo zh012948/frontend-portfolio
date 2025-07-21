@@ -11,6 +11,7 @@
     background: rgba(8, 8, 8, 0.1);
     border-radius: 30px;
     width: 320px;
+    height: 450px;
 }
 
 .container .project-img {
@@ -34,9 +35,9 @@
 
 
 .container .upper .skill-list {
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* text-align: center; */
     gap: 5px;
 }
 

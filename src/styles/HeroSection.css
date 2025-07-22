@@ -108,10 +108,29 @@
 
 
 
+.blob-image img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+
+
 
 /* Laptop */
 
 @media screen and (min-width: 1024px) {
+
+    .blob-image img {
+        position: relative;
+        margin-top: 130px;
+        margin-left: 50px;
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+    }
+
+
 
     .hero-section {
         align-items: center;
@@ -157,5 +176,24 @@
 
     .btnContact a:hover {
         opacity: 0.8;
+    }
+}
+
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .responsive-image {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+
+/* Extra small devices (like older phones) */
+@media (max-width: 480px) {
+    .responsive-image {
+        width: 150px;
+        height: 150px;
     }
 }

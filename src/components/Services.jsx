@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Services.css';
 import { FaCode, FaServer, FaPalette, FaTimes, FaArrowRight } from 'react-icons/fa';
 
@@ -58,6 +58,19 @@ const Services = () => {
 
     const openModal = (service) => setSelectedService(service);
     const closeModal = () => setSelectedService(null);
+
+    // ✅ Lock scroll when modal is open
+    useEffect(() => {
+        if (selectedService) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [selectedService]);
 
     return (
         <div className="services-container">

@@ -20,14 +20,13 @@ export default function About() {
                         </p>
 
                         <p className="content">
-                            I am a passionate and fast-learning MERN stack developer with a strong focus on front-end development using React. I thrive in collaborative environments, enjoy solving real-world problems with clean, efficient code, and strive to build user-friendly, performance-optimized web applications.
+                            I'm a fast-learning MERN stack developer with a strong focus on front-end development using React. I thrive in collaborative environments and love solving real-world problems through clean, efficient, and scalable code.
 
-                            My goal is to continuously grow as a developer by working with innovative teams and companies that value quality, creativity, and continuous improvement. I’m particularly driven by the opportunity to transform complex challenges into intuitive, scalable solutions through modern development practices and thoughtful design.
+                            I aim to build user-friendly, performance-optimized web applications that balance great UI/UX with modern development best practices.
 
-                            Whether it’s enhancing UI/UX, integrating robust backend systems, or optimizing application performance, I am committed to delivering high-quality results that contribute real value. I’m always eager to learn new technologies, adapt to evolving industry trends, and make a meaningful impact wherever I work.
-
-
+                            Whether it’s enhancing user interfaces, integrating backends, or improving performance, I’m committed to delivering high-quality results that make a difference. I'm always learning, adapting, and pushing myself to grow.
                         </p>
+
 
                         <button className="btnGetInTouch">
                             Get in Touch

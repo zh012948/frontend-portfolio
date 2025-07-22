@@ -1,8 +1,8 @@
 import '../styles/About.css'
 import AboutBox from './AboutBox'
-import html from '../assets/images/html.png'
-import briefcase from '../assets/images/briefcase.png'
-import user from '../assets/images/user.png'
+import html from '../assets/images/html.webp'
+import briefcase from '../assets/images/briefcase.webp'
+import user from '../assets/images/user.webp'
 
 
 export default function About() {
@@ -13,7 +13,6 @@ export default function About() {
                 <h1 className="heading">About Me</h1>
 
                 <div className="about-container">
-
 
                     <div className="about-content">
                         <p className="role">

@@ -1,10 +1,10 @@
 import '../styles/HeroSection.css'
-import linkedin from '../assets/images/linkedin.png'
-import instagram from '../assets/images/instagram.png'
-import github from '../assets/images/github.png'
+import linkedin from '../assets/images/linkedin.webp'
+import instagram from '../assets/images/instagram.webp'
+import github from '../assets/images/github.webp'
 // import BlobImage1 from '../components/BlobImage'
 import BlogImage from '../assets/images/Blob-Image.webp'
-import arrow from '../assets/images/arrow.png'
+import arrow from '../assets/images/arrow.webp'
 import TypingAnimation from '../components/TypingAnimation'
 
 export default function HeroSection() {

@@ -1,9 +1,9 @@
 import '../styles/Portfolio.css'
 import ProjectBox from './ProjectBox'
 
-import img1 from '/projects/project1.PNG'
-import img2 from '/projects/project2.PNG'
-import img3 from '/projects/project3.PNG'
+import img1 from '../assets/projects/project1.webp'
+import img2 from '../assets/projects/project2.webp'
+import img3 from '../assets/projects/project3.webp'
 
 export default function Portfolio() {
 

@@ -41,7 +41,7 @@ export default function About() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Check Resume
+                            Get Resume
                         </a>
 
                     </div>

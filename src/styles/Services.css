@@ -10,6 +10,7 @@
     text-align: center;
     /* font-size: 2.5rem; */
     font-weight: 700;
+    /* font-size: 2rem; */
     margin-bottom: 50px;
     position: relative;
     /* Increased margin for better separation */
@@ -196,9 +197,6 @@
         /* Adjusted padding for mobile */
     }
 
-    .services-title {
-        font-size: 2rem;
-    }
 
     .cards-grid {
         grid-template-columns: 1fr;

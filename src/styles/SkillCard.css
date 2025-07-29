@@ -28,6 +28,7 @@
     animation: none;
 }
 
+/* and all set */
 /* Loop animation only while hovering */
 .skill-card-container:hover::before {
     animation: flashEffect 2s linear infinite;

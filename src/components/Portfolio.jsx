@@ -4,6 +4,7 @@ import ProjectBox from './ProjectBox'
 import img1 from '../assets/projects/project1.webp'
 import img2 from '../assets/projects/project2.webp'
 import img3 from '../assets/projects/project3.webp'
+import img4 from '../assets/projects/project4.webp'
 
 export default function Portfolio() {
 
@@ -13,6 +14,28 @@ export default function Portfolio() {
                 <h1 className='heading'>Portfolio</h1>
 
                 <div className="project-container">
+
+                    {/* Ya Wala project thora acha hai isi lia idhar rakh raha hon */}
+
+                    <ProjectBox
+                        image={img4}
+                        title="Expense Tracker "
+                        skills={[
+                            "React Js",
+                            "Tailwind",
+                            "Firebase",
+                            "react-icon",
+                            "TypeScript",
+                            "localStorage",
+                            "auth",
+                            "vercel"
+                        ]
+                        }
+                        description="Built a responsive expense tracker with Firebase auth, real-time updates, budget control, and intuitive UI using React, TypeScript, and Tailwind CSS."
+                        link="https://expense-tracker-firebase-eosin.vercel.app/"
+                    />
+
+
 
                     <ProjectBox
                         image={img1}

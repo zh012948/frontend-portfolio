@@ -13,6 +13,7 @@ const TypingAnimation = () => {
                 'React Developer',
                 'JavaScript Enthusiast',
                 'MERN Stack Developer',
+                'Full Stack Developer',
                 'Programmer'
             ],
 

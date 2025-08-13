@@ -1,6 +1,7 @@
 import '../styles/HeroSection.css'
 import linkedin from '../assets/images/linkedin.webp'
 import instagram from '../assets/images/instagram.webp'
+import fiverr from '../assets/images/fiverr.webp'
 import github from '../assets/images/github.webp'
 // import BlobImage1 from '../components/BlobImage'
 import BlogImage from '../assets/images/Blob-Image.webp'
@@ -17,6 +18,7 @@ export default function HeroSection() {
                     <a href="https://www.linkedin.com/in/m-zeeshan-haider-606bb3284/" target='blank'><img src={linkedin} alt='linkedin' title='linkedin profile' /></a>
                     <a href="https://github.com/zh012948/" target='blank'><img src={github} alt='github' title='github profile' /></a>
                     <a href="https://www.instagram.com/zh012948" target='blank'><img src={instagram} alt='instagram' title='instagram profile' /></a>
+                    <a href="https://www.fiverr.com/s/1qpNyak" target='blank'><img src={fiverr} alt='Fiverr' title='Fiverr profile' /></a>
                 </div>
 
 

@@ -11,9 +11,9 @@ const TypingAnimation = () => {
             strings: [
                 'Frontend Engineer',
                 'React Developer',
-                'JavaScript Enthusiast',
                 'MERN Stack Developer',
                 'Full Stack Developer',
+                'JavaScript Enthusiast',
                 'Programmer'
             ],
 

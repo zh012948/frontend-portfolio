@@ -5,7 +5,7 @@ import Skills from "./components/Skills"
 import Services from './components/Services'
 import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio"
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 
 const App = () => {

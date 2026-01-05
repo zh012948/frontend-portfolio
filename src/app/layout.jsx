@@ -1,12 +1,11 @@
 import './globals.css';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export const metadata = {
   title: 'Zeeshan Haider | Portfolio',
   description: 'My personal portfolio website showcasing projects, skills, and contact info.',
   keywords: ['Zeeshan Haider', 'Portfolio', 'React Developer', 'Frontend Developer', 'MERN Stack'],
   authors: [{ name: 'Zeeshan Haider', url: 'https://m-zeeshan-haider.vercel.app/' }],
+  metadataBase: new URL('https://m-zeeshan-haider.vercel.app'), // ✅ Add this line
   openGraph: {
     title: 'Zeeshan Haider | Portfolio',
     description: 'My personal portfolio website showcasing projects, skills, and contact info.',
@@ -35,14 +34,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <title>Zeeshan Haider | Portfolio</title>
         <link rel="icon" href="/code.png" />
       </head>
       <body>
         {children}
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

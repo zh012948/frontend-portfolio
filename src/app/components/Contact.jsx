@@ -45,7 +45,7 @@ const Contact = () => {
                         </div>
                         <div className="detail">
                             <FaMapMarkerAlt className="icon" />
-                            <span>Rawalpindi, Pakistan</span>
+                            <span>Islamabad, Pakistan</span>
                         </div>
                     </div>
                 </div>
